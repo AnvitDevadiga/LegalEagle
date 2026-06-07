@@ -3,12 +3,12 @@
 <div align="center">
 
 ```
-        ██╗     ███████╗ ██████╗  █████╗ ██╗      ███████╗ █████╗  ██████╗ ██╗     ███████╗
-        ██║     ██╔════╝██╔════╝ ██╔══██╗██║      ██╔════╝██╔══██╗██╔════╝ ██║     ██╔════╝
-        ██║     █████╗  ██║  ███╗███████║██║      █████╗  ███████║██║  ███╗██║     █████╗
-        ██║     ██╔══╝  ██║   ██║██╔══██║██║      ██╔══╝  ██╔══██║██║   ██║██║     ██╔══╝
-        ███████╗███████╗╚██████╔╝██║  ██║███████╗ ███████╗██║  ██║╚██████╔╝███████╗███████╗
-        ╚══════╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝
+██╗     ███████╗ ██████╗  █████╗ ██╗      ███████╗ █████╗  ██████╗ ██╗     ███████╗
+██║     ██╔════╝██╔════╝ ██╔══██╗██║      ██╔════╝██╔══██╗██╔════╝ ██║     ██╔════╝
+██║     █████╗  ██║  ███╗███████║██║      █████╗  ███████║██║  ███╗██║     █████╗
+██║     ██╔══╝  ██║   ██║██╔══██║██║      ██╔══╝  ██╔══██║██║   ██║██║     ██╔══╝
+███████╗███████╗╚██████╔╝██║  ██║███████╗ ███████╗██║  ██║╚██████╔╝███████╗███████╗
+╚══════╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝
 ```
 
 
@@ -19,9 +19,9 @@
 
 # What is Legal Eagle?
 
-Legal Eagle is a **production-grade offline RAG (Retrieval-Augmented Generation) system** built for Indian law. It indexes 620+ pages of legal documents — the Indian Constitution, IPC, and Bharatiya Nyaya Sanhita — into a local ChromaDB vector store and answers questions using a locally running **Llama 3** model via Ollama.
+Legal Eagle is a production-grade offline RAG (Retrieval-Augmented Generation) system built for Indian law. It indexes 620+ pages of legal documents — the Indian Constitution, IPC, and Bharatiya Nyaya Sanhita — into a local ChromaDB vector store and answers questions using a locally running Llama 3 model via Ollama.
 
-**No cloud. No API keys. No data leaves your machine.**
+No cloud. No API keys. No data leaves your machine.
 
 The CLI is inspired by modern coding terminals like Claude Code: color-coded role panels, streaming markdown answers, live spinners during retrieval, and syntax-highlighted output — all running entirely offline.
 
