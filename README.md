@@ -13,7 +13,6 @@
  ╚══════╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝
 ```
 
-<h3>⚖️ &nbsp; Offline AI Legal Assistant for Indian Law &nbsp; ⚖️</h3>
 
 <p>
   <img src="https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
@@ -76,8 +75,8 @@ The CLI is inspired by modern coding terminals like Claude Code: color-coded rol
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
-║                        USER QUERY (CLI)                         ║
-║               app.py · REPL · slash commands                    ║
+║                        USER QUERY (CLI)                          ║
+║               app.py · REPL · slash commands                     ║
 ╚══════════════════════════╦═══════════════════════════════════════╝
                            ║
               ┌────────────▼────────────┐
@@ -214,19 +213,19 @@ python app.py
 
 ╭─ LEGAL EAGLE ──────────────────────────────────────────────────────╮
 │                                                                    │
-│  **Article 21 — Constitution of India**                           │
+│  **Article 21 — Constitution of India**                            │
 │                                                                    │
-│  Article 21 guarantees the **right to life and personal liberty** │
-│  to every person. No person shall be deprived of his life or      │
-│  personal liberty except according to procedure established by    │
-│  law.                                                             │
+│  Article 21 guarantees the **right to life and personal liberty**  │
+│  to every person. No person shall be deprived of his life or       │
+│  personal liberty except according to procedure established by     │
+│  law.                                                              │
 │                                                                    │
-│  This right has been interpreted expansively by the Supreme       │
-│  Court to include the right to livelihood, health, education,     │
-│  and a dignified life.                                            │
+│  This right has been interpreted expansively by the Supreme        │
+│  Court to include the right to livelihood, health, education,      │
+│  and a dignified life.                                             │
 │                                                                    │
-│  sources: constitution.pdf   ·   3 chunks   ·   1.4s             │
-│  Disclaimer: AI-generated summary. Verify with official sources.  │
+│  sources: constitution.pdf   ·   3 chunks   ·   1.4s               │
+│  Disclaimer: AI-generated summary. Verify with official sources.   │
 ╰────────────────────────────────────────────────────────────────────╯
 ```
 
@@ -261,23 +260,7 @@ python app.py
    (abuse · assault · self-harm · violence · threat)
 ```
 
----
 
-## ✨ Feature Highlights
-
-**🔴 Streaming responses** — answers render token-by-token via LangChain streaming. Start reading immediately.
-
-**🟡 Claude Code-style terminal** — color-coded `YOU` (cyan) · `LEGAL EAGLE` (green) · `SYS` (amber) panels built with the `rich` library.
-
-**🟢 MMR retrieval** — Maximum Marginal Relevance (`k=5`, `fetch_k=20`, `λ=0.5`) diversifies retrieved chunks so multi-section answers cite different Acts instead of repeating the same passage.
-
-**🔵 Singleton clients** — LLM and embedding clients are `@lru_cache` singletons. First query warms up; every subsequent one is hot with zero re-initialisation overhead.
-
-**🟣 Idempotent ingest** — `python ingest.py` is a no-op if the vector store exists. Pass `--rebuild` to reindex. PDF loading runs in parallel via `ThreadPoolExecutor`, embeddings in batches of 64.
-
-**🟠 Safety-aware** — high-risk keywords trigger automatic appending of Indian emergency helplines: **112** · **Kiran Mental Health 1800-599-0019** · **NCW 181**.
-
----
 
 ## 📁 Project Structure
 
@@ -301,21 +284,6 @@ LegalEagle/
 ├── 📄 requirements.txt
 └── 📄 README.md
 ```
-
----
-
-## 🗺️ Roadmap
-
-- [ ] 🌐 FastAPI web interface with REST endpoints
-- [ ] 🎨 Streamlit UI for non-technical users
-- [ ] ⚖️ IPC vs BNS side-by-side comparison mode
-- [ ] 📄 Page-level source citations with PDF jump links
-- [ ] 🐳 Docker deployment (one-command setup)
-- [ ] 📊 Accuracy evaluation benchmark (RAGAS)
-- [ ] 🔍 Multi-query retrieval for complex legal questions
-- [ ] 🗣️ Voice input support
-
----
 
 <div align="center">
 
