@@ -306,7 +306,7 @@ LegalEagle/
 
 </div>
 NEW 
-
+```
 <div align="center">
 
 ```
@@ -347,7 +347,7 @@ NEW
 
 ---
 
-## 🦅 What is Legal Eagle?
+## What is Legal Eagle?
 
 Legal Eagle is a **production-grade offline RAG (Retrieval-Augmented Generation) system** built for Indian law. It indexes 620+ pages of legal documents — the Indian Constitution, IPC, and Bharatiya Nyaya Sanhita — into a local ChromaDB vector store and answers questions using a locally running **Llama 3** model via Ollama.
 
@@ -357,7 +357,7 @@ The CLI is inspired by modern coding terminals like Claude Code: color-coded rol
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
@@ -408,32 +408,32 @@ The CLI is inspired by modern coding terminals like Claude Code: color-coded rol
 
 ---
 
-## 📚 Legal Coverage
+## Legal Coverage
 
 | Document | Coverage | Chunks | Pages |
 |:---|:---|:---:|:---:|
-| 🇮🇳 Indian Constitution | All Articles + Amendments | ~980 | ~250 |
-| ⚖️ Indian Penal Code (IPC) | All Sections | ~740 | ~190 |
-| 📜 Bharatiya Nyaya Sanhita (BNS) | Full Text | ~710 | ~183 |
+| Indian Constitution | All Articles + Amendments | ~980 | ~250 |
+| Indian Penal Code (IPC) | All Sections | ~740 | ~190 |
+| Bharatiya Nyaya Sanhita (BNS) | Full Text | ~710 | ~183 |
 | **Total** | **620+ pages of Indian law** | **~2,999** | **~623** |
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technology | Why |
 |:---|:---|:---|
-| 🤖 **LLM** | Llama 3 via Ollama | Local legal reasoning, zero API cost |
-| 🔢 **Embeddings** | `nomic-embed-text` | High-quality legal text vectorization |
-| 🔗 **RAG Framework** | LangChain LCEL | Composable pipeline, async-ready |
-| 🗄️ **Vector DB** | ChromaDB (persisted) | Fast MMR semantic retrieval |
-| 🎨 **Terminal UI** | `rich` | Panels, live markdown, syntax highlighting |
-| ⚡ **Concurrency** | ThreadPoolExecutor | Parallelised PDF loading |
-| 🐍 **Language** | Python 3.11+ | Core implementation |
+| **LLM** | Llama 3 via Ollama | Local legal reasoning, zero API cost |
+| **Embeddings** | `nomic-embed-text` | High-quality legal text vectorization |
+| **RAG Framework** | LangChain LCEL | Composable pipeline, async-ready |
+| **Vector DB** | ChromaDB (persisted) | Fast MMR semantic retrieval |
+| **Terminal UI** | `rich` | Panels, live markdown, syntax highlighting |
+| **Concurrency** | ThreadPoolExecutor | Parallelised PDF loading |
+| **Language** | Python 3.11+ | Core implementation |
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -482,35 +482,6 @@ python app.py
 
 ---
 
-## 💻 Live Terminal Preview
-
-```
-╭───────────────────────── Legal Eagle ─────────────────────────────╮
-│   model     llama3   (local · offline)                            │
-│   vectors   legal_db  ·  2999 chunks                              │
-│   scope     Constitution of India · IPC · Bharatiya Nyaya Sanhita │
-│   shortcuts  /help   /clear   /exit                               │
-╰────────────────────── offline legal assistant ────────────────────╯
-
- YOU  What does Article 21 of the Constitution guarantee?
-
-⠸  retrieving relevant statutes…
-
-╭─ LEGAL EAGLE ──────────────────────────────────────────────────────╮
-│                                                                    │
-│  **Article 21 — Constitution of India**                           │
-│                                                                    │
-│  Article 21 guarantees the right to life and personal liberty     │
-│  to every person. No person shall be deprived of his life or      │
-│  personal liberty except according to procedure established by    │
-│  law.                                                             │
-│                                                                    │
-│  sources: constitution.pdf   ·   3 chunks   ·   1.4s             │
-│  Disclaimer: AI-generated summary. Verify with official sources.  │
-╰────────────────────────────────────────────────────────────────────╯
-```
-
----
 
 ## ⌨️ Slash Commands
 
@@ -529,7 +500,7 @@ python app.py
 
 ---
 
-## 🛡️ Anti-Hallucination Design
+## Anti-Hallucination Design
 
 ```
 ✓  Answers strictly grounded in retrieved legal context only
@@ -543,23 +514,8 @@ python app.py
 
 ---
 
-## ✨ Feature Highlights
 
-**🔴 Streaming responses** — answers render token-by-token via LangChain streaming. Start reading immediately.
-
-**🟡 Claude Code-style terminal** — color-coded `YOU` (cyan) · `LEGAL EAGLE` (green) · `SYS` (amber) panels built with the `rich` library.
-
-**🟢 MMR retrieval** — Maximum Marginal Relevance (`k=5`, `fetch_k=20`, `λ=0.5`) diversifies retrieved chunks so multi-section answers cite different Acts instead of repeating the same passage.
-
-**🔵 Singleton clients** — LLM and embedding clients are `@lru_cache` singletons. First query warms up; every subsequent one is hot with zero re-initialisation overhead.
-
-**🟣 Idempotent ingest** — `python ingest.py` is a no-op if the vector store exists. Pass `--rebuild` to reindex. PDF loading runs in parallel via `ThreadPoolExecutor`, embeddings in batches of 64.
-
-**🟠 Safety-aware** — high-risk keywords trigger automatic appending of Indian emergency helplines: **112** · **Kiran Mental Health 1800-599-0019** · **NCW 181**.
-
----
-
-## 📁 Project Structure
+## Project Structure
 
 ```
 LegalEagle/
@@ -617,25 +573,6 @@ LegalEagle/
 
 </details>
 
----
-
-## 🗺️ Roadmap
-
-- [ ] 🌐 FastAPI web interface with REST endpoints
-- [ ] 🎨 Streamlit UI for non-technical users
-- [ ] ⚖️ IPC vs BNS side-by-side comparison mode
-- [ ] 📄 Page-level source citations with PDF jump links
-- [ ] 🐳 Docker deployment (one-command setup)
-- [ ] 📊 Accuracy evaluation benchmark (RAGAS)
-- [ ] 🔍 Multi-query retrieval for complex legal questions
-
----
-
-<div align="center">
-
-<br/>
-
----
 
 **Built with ⚡ by [Anvit Devadiga](https://github.com/AnvitDevadiga)**
 
@@ -659,3 +596,4 @@ LegalEagle/
 [![Buy me a pizza](https://img.shields.io/badge/Buy_me_a-🍕_Pizza-FF6B35?style=for-the-badge)](https://buymeacoffee.com/anvitdevadiga)
 
 </div>
+```
