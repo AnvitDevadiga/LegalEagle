@@ -39,7 +39,7 @@ The CLI is built in the spirit of modern coding terminals: role-coded panels, st
 
 **Consumer rights query — live session**
 
-![Consumer Rights Query](screenshots/Screenshot 2026-06-07 at 11.09.04.png)
+![Consumer Rights Query](screenshots/demo-consumer-rights.png)
 
 > A real-time query about laptop motherboard fault and Consumer Forum rights — answered with cited sections from BNS and IPC within seconds.
 
@@ -47,7 +47,7 @@ The CLI is built in the spirit of modern coding terminals: role-coded panels, st
 
 **Workplace harassment query — safety-aware response**
 
-![Workplace Harassment Query](screenshots/Screenshot 2026-06-07 at 11.10.27.png)
+![Workplace Harassment Query](screenshots/demo-harassment-safety.png)
 > Query about workplace sexual harassment triggers both legal citations (POSH Act 2013, IPC Section 354D) and an automatic Safety Notice with emergency helplines.
 
 ---
