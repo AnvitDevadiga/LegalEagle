@@ -1,60 +1,98 @@
+
+```markdown
 <div align="center">
 
 ```
- ██╗     ███████╗ ██████╗  █████╗ ██╗      ███████╗ █████╗  ██████╗ ██╗     ███████╗
- ██║     ██╔════╝██╔════╝ ██╔══██╗██║      ██╔════╝██╔══██╗██╔════╝ ██║     ██╔════╝
- ██║     █████╗  ██║  ███╗███████║██║      █████╗  ███████║██║  ███╗██║     █████╗
- ██║     ██╔══╝  ██║   ██║██╔══██║██║      ██╔══╝  ██╔══██║██║   ██║██║     ██╔══╝
- ███████╗███████╗╚██████╔╝██║  ██║███████╗ ███████╗██║  ██║╚██████╔╝███████╗███████╗
- ╚══════╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                                                                               ║
+║   ██╗     ███████╗ ██████╗  █████╗ ██╗      ███████╗ █████╗  ██████╗ ██╗     ███████╗
+║   ██║     ██╔════╝██╔════╝ ██╔══██╗██║      ██╔════╝██╔══██╗██╔════╝ ██║     ██╔════╝
+║   ██║     █████╗  ██║  ███╗███████║██║      █████╗  ███████║██║  ███╗██║     █████╗
+║   ██║     ██╔══╝  ██║   ██║██╔══██║██║      ██╔══╝  ██╔══██║██║   ██║██║     ██╔══╝
+║   ███████╗███████╗╚██████╔╝██║  ██║███████╗ ███████╗██║  ██║╚██████╔╝███████╗███████╗
+║   ╚══════╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝
+║                                                                               ║
+║                    🦅  OFFLINE AI LEGAL ASSISTANT FOR INDIA  🦅               ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
 ```
 
-### *Offline AI Legal Assistant for Indian Law*
-
-![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![LangChain](https://img.shields.io/badge/LangChain-RAG-1C3C3C?style=for-the-badge&logo=chainlink&logoColor=white)
 ![Ollama](https://img.shields.io/badge/Ollama-Local_LLM-black?style=for-the-badge&logo=ollama&logoColor=white)
 ![ChromaDB](https://img.shields.io/badge/ChromaDB-Vector_DB-FF6B35?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-Academic-green?style=for-the-badge)
 
-<br/>
-
-> **100% Offline · Zero API Cost · Hallucination-Resistant**
->
-> *Ask questions about Indian law. Get grounded, cited answers — entirely from a local model.*
+> **🔒 100% Offline · 💸 Zero API Cost · 🧠 Hallucination‑Resistant**  
+> *Ask anything about Indian law. Get grounded, cited answers — entirely from a local Llama 3.*
 
 </div>
 
 ---
 
-## What is Legal Eagle?
+## 🔥 Why Legal Eagle?
 
-Legal Eagle is an **offline RAG system** that lets you query 620+ pages of Indian legal documents — the Constitution, IPC, and Bharatiya Nyaya Sanhita — using a locally running Llama 3 model. No internet calls, no telemetry, no third-party APIs.
+Most “legal AI” tools phone home to ChatGPT or Google – your case strategy, client data, or personal query? **Not here.**  
+Legal Eagle runs **entirely on your laptop**, with zero telemetry, zero third‑party APIs, and zero bills.
 
-The CLI is built in the spirit of modern coding terminals: role-coded panels, streaming markdown answers, syntax-highlighted code blocks, and a live spinner during retrieval.
-
----
-
-## Screenshots
-
-**Consumer rights query — live session**
-
-![Consumer Rights Query](screenshots/demo-consumer-rights.png)
-
-> A real-time query about laptop motherboard fault and Consumer Forum rights — answered with cited sections from BNS and IPC within seconds.
+- ⚡ **Blazing fast RAG** – MMR retrieval + batched embeddings
+- 🛡️ **Safety first** – automatic helplines for sensitive queries (abuse, harassment, self‑harm)
+- 📚 **620+ pages** of the Constitution, IPC, and Bharatiya Nyaya Sanhita
+- 🎨 **Claude‑Code style terminal** – colored panels, live spinner, streaming markdown
 
 ---
 
-**Workplace harassment query — safety-aware response**
+## 🖥️ Terminal Demo (real output)
 
-![Workplace Harassment Query](screenshots/demo-harassment-safety.png)
-> Query about workplace sexual harassment triggers both legal citations (POSH Act 2013, IPC Section 354D) and an automatic Safety Notice with emergency helplines.
+```bash
+$ python app.py
+
+╭───────── Legal Eagle ──────────╮
+│   model    llama3 (local)      │
+│ vectors    legal_db · 2999     │
+│   scope    Constitution · IPC  │
+│            Bharatiya Nyaya     │
+│            Sanhita             │
+│ shortcuts  /help /clear /exit  │
+╰────────────────────────────────╯
+
+> YOU  What does Article 21 guarantee?
+
+╭─ LEGAL EAGLE ──────────────────────────────────────────────────╮
+│                                                                │
+│ **Article 21 — Constitution of India**                        │
+│                                                                │
+│ Article 21 guarantees the protection of life and personal      │
+│ liberty. No person shall be deprived of these rights except    │
+│ according to procedure established by law.                     │
+│                                                                │
+│ 📄 sources: constitution.pdf · 3 chunks · 1.4s                │
+│ ⚖️ Disclaimer: AI‑generated summary. Verify with official     │
+│    legal sources or a licensed practitioner.                   │
+╰────────────────────────────────────────────────────────────────╯
+```
+
+> **Live session screenshots**  
+> ![Consumer Rights Query](screenshots/demo-consumer-rights.png)  
+> ![Workplace Harassment Query](screenshots/demo-harassment-safety.png)
 
 ---
 
-## Architecture
+## 🧠 Anti‑Hallucination Arsenal
 
 ```
+✓  Answers strictly limited to retrieved legal context
+✓  Explicit refusal when information is not in the documents
+✓  MMR retrieval — diversified context, no duplicate chunks
+✓  Low-temperature LLM (temp=0.1) — no creative fabrication
+✓  Source citation on every response (PDF · chunk count · latency)
+✓  Safety Notice auto-appended for sensitive queries
+```
+
+---
+
+## 🏗️ Architecture (as code)
+
+```text
 ┌─────────────────────────────────────────────────────────────┐
 │                         app.py (REPL)                       │
 │    slash commands · disclaimer gate · safety filter         │
@@ -94,7 +132,7 @@ The CLI is built in the spirit of modern coding terminals: role-coded panels, st
 
 ---
 
-## Legal Coverage
+## 📜 Legal Coverage
 
 | Document | Coverage | Pages |
 |---|---|---|
@@ -104,25 +142,11 @@ The CLI is built in the spirit of modern coding terminals: role-coded panels, st
 
 ---
 
-## Tech Stack
-
-| Layer | Technology | Purpose |
-|---|---|---|
-| **LLM** | Llama 3 (via Ollama) | Legal reasoning & answer generation |
-| **Embeddings** | `nomic-embed-text` | Legal text vectorization |
-| **RAG Framework** | LangChain LCEL | Pipeline orchestration |
-| **Vector DB** | ChromaDB (persisted locally) | Semantic retrieval |
-| **Terminal UI** | `rich` | Panels, markdown, syntax highlighting |
-| **Language** | Python 3.11+ | Core implementation |
-
----
-
-## Quick Start
+## 🚀 Quick Start (blood, sweat & 2 minutes)
 
 ### Prerequisites
-
 - Python 3.11+
-- [Ollama](https://ollama.ai) installed and running
+- [Ollama](https://ollama.ai) running in background
 
 ### 1. Clone & setup
 
@@ -145,12 +169,12 @@ ollama serve            # keep this terminal running
 ### 3. Build the knowledge base
 
 ```bash
-# Place PDFs in data/ folder first
-python ingest.py            # one-time index build (~2 min)
-python ingest.py --rebuild  # delete & reindex from scratch
+# Place PDFs in data/ first
+python ingest.py            # one‑time index build (~2 min)
+python ingest.py --rebuild  # nuke & reindex from scratch
 ```
 
-### 4. Launch
+### 4. Launch the Eagle
 
 ```bash
 python app.py
@@ -158,37 +182,7 @@ python app.py
 
 ---
 
-## Example Session
-
-```
-╭───────── Legal Eagle ──────────╮
-│   model    llama3 (local)      │
-│ vectors    legal_db · 2999     │
-│   scope    Constitution · IPC  │
-│            Bharatiya Nyaya     │
-│            Sanhita             │
-│ shortcuts  /help /clear /exit  │
-╰────────────────────────────────╯
-
- YOU  What does Article 21 guarantee?
-
-╭─ LEGAL EAGLE ──────────────────────────────────────────────────╮
-│                                                                │
-│ **Article 21 — Constitution of India**                        │
-│                                                                │
-│ Article 21 guarantees the protection of life and personal      │
-│ liberty. No person shall be deprived of these rights except    │
-│ according to procedure established by law.                     │
-│                                                                │
-│ sources: constitution.pdf · 3 chunks · 1.4s                   │
-│ Disclaimer: This is an AI-generated summary. Please verify    │
-│ with official legal sources or a licensed practitioner.        │
-╰────────────────────────────────────────────────────────────────╯
-```
-
----
-
-## Slash Commands
+## ⌨️ Slash Commands
 
 | Command | Action |
 |---|---|
@@ -200,78 +194,52 @@ python app.py
 
 ---
 
-## Anti-Hallucination Design
+## 💎 Features that bleed quality
 
-```
-✓  Answers strictly limited to retrieved legal context
-✓  Explicit refusal when information is not in the documents
-✓  MMR retrieval — diversified context, no duplicate chunks
-✓  Low-temperature LLM config (temp=0.1) — no creative fabrication
-✓  Source citation on every response (PDF · chunk count · latency)
-✓  Safety Notice auto-appended for sensitive queries (abuse, harassment, etc.)
-```
+- **Streaming responses** – tokens render instantly, no waiting.
+- **Claude Code‑style terminal** – color‑coded `YOU` / `LEGAL EAGLE` / `SYS` panels.
+- **MMR retrieval** – diversified context (`k=5`, `fetch_k=20`), no repetitive chunks.
+- **Singleton LLM + embedding clients** – hot cache, zero per‑query overhead.
+- **Idempotent ingest** – parallel PDF loading + batched embeddings (64/call).
+- **Safety‑aware** – auto‑injects Indian emergency helplines for sensitive keywords.
 
 ---
 
-## Key Features
+## 📁 Project Structure
 
-**Streaming responses** — answers render token-by-token; start reading immediately, no waiting for full generation.
-
-**Claude Code-style terminal** — color-coded `YOU` / `LEGAL EAGLE` / `SYS` panels, markdown body, syntax-highlighted code blocks, live spinner.
-
-**MMR retrieval** — diversified context (`k=5`, `fetch_k=20`) so multi-section answers cite different Acts/Articles instead of duplicating the same chunk.
-
-**Singleton LLM + embedding clients** — no per-query re-initialisation; warm-up happens at boot, every subsequent query is hot.
-
-**Idempotent ingest** — re-running `python ingest.py` no-ops unless you pass `--rebuild`; PDF loading is parallelised (ThreadPoolExecutor) and embeddings are batched (64/call).
-
-**Safety-aware** — keywords like `abuse`, `assault`, `self-harm` auto-append Indian emergency helplines (112 · Kiran 1800-599-0019 · NCW 181) to every answer.
-
----
-
-## Project Structure
-
-```
+```text
 legal-eagle/
-│
-├── data/
-│   ├── constitution.pdf      # Indian Constitution
-│   ├── ipc.pdf               # Indian Penal Code
-│   └── bns.pdf               # Bharatiya Nyaya Sanhita
-│
-├── screenshots/
-│   ├── Screenshot_2026-06-07_at_11_09_04.png
-│   └── Screenshot_2026-06-07_at_11_10_27.png
-│
-├── ingest.py                 # Builds the Chroma vector store
-├── retriever.py              # Lazy singleton retriever (MMR)
-├── ui.py                     # Code-style terminal renderer
+├── data/                     # PDFs: constitution, ipc, bns
+├── screenshots/              # demo images
+├── ingest.py                 # Chroma vector store builder
+├── retriever.py              # lazy MMR retriever singleton
+├── ui.py                     # rich terminal renderer
 ├── app.py                    # REPL entry point
-├── prompts.py                # Prompt templates
+├── prompts.py                # prompt templates
 ├── requirements.txt
 └── README.md
 ```
 
 ---
 
-## Roadmap
+## 🗺️ Roadmap
 
-- [ ] FastAPI web interface with REST endpoints
-- [ ] Streamlit UI for non-technical users
-- [ ] IPC vs BNS side-by-side comparison mode
-- [ ] Page-level source citations
-- [ ] Docker deployment
-- [ ] Accuracy evaluation benchmark
+- [ ] FastAPI web interface + REST endpoints
+- [ ] Streamlit UI for non‑tech users
+- [ ] IPC vs BNS side‑by‑side comparison
+- [ ] Page‑level source citations
+- [ ] Docker + docker‑compose
+- [ ] Accuracy benchmark suite
 
 ---
 
 <div align="center">
 
-**Built by [Anvit Devadiga](https://github.com/AnvitDevadiga)**
-
-*AI Engineer · Industrial Domain · Production RAG Systems*
+**Built with 🩸🧠💦 by [Anvit Devadiga](https://github.com/AnvitDevadiga)**  
+*AI Engineer · Industrial RAG · Production‑grade systems*
 
 [![GitHub](https://img.shields.io/badge/GitHub-AnvitDevadiga-181717?style=for-the-badge&logo=github)](https://github.com/AnvitDevadiga)
 [![Email](https://img.shields.io/badge/Email-anvitdevadiga.in@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:anvitdevadiga.in@gmail.com)
 
 </div>
+```
