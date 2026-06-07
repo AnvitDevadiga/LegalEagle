@@ -165,7 +165,7 @@ python app.py
 
 ---
 
-## Anti-Hallucination Design
+# Anti-Hallucination Design
 
 
 ✓  Answers strictly grounded in retrieved legal context only
@@ -179,7 +179,7 @@ python app.py
 ---
 
 
-## Project Structure
+# Project Structure
 
 
 LegalEagle/
