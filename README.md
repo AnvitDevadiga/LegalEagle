@@ -74,50 +74,50 @@ The CLI is inspired by modern coding terminals like Claude Code: color-coded rol
 ## 🏗️ Architecture
 
 ```
-╔══════════════════════════════════════════════════════════════════╗
-║                        USER QUERY (CLI)                          ║
-║               app.py · REPL · slash commands                     ║
-╚══════════════════════════╦═══════════════════════════════════════╝
-                           ║
-              ┌────────────▼────────────┐
-              │    Safety Filter        │  ← auto-appends helplines
-              │    Greeting Shortcut    │  ← skips RAG for hi/thanks
-              └────────────┬────────────┘
+    ╔══════════════════════════════════════════════════════════════════╗
+    ║                        USER QUERY (CLI)                          ║
+    ║               app.py · REPL · slash commands                     ║
+    ╚══════════════════════════╦═══════════════════════════════════════╝
+                               ║
+                  ┌────────────▼────────────┐
+                  │    Safety Filter        │  ← auto-appends helplines
+                  │    Greeting Shortcut    │  ← skips RAG for hi/thanks
+                  └────────────┬────────────┘
+                               │
+                  ┌────────────▼────────────┐
+                  │   LangChain LCEL Chain  │
+                  │   RunnableParallel      │
+                  │   context ──► retrieve  │
+                  │   question ──► passthru │
+                  └────────┬────────────────┘
                            │
-              ┌────────────▼────────────┐
-              │   LangChain LCEL Chain  │
-              │   RunnableParallel      │
-              │   context ──► retrieve  │
-              │   question ──► passthru │
-              └────────┬────────────────┘
-                       │
-         ┌─────────────▼──────────────────┐
-         │          retriever.py          │
-         │   ChromaDB · MMR · k=5         │
-         │   fetch_k=20 · λ=0.5           │
-         │   nomic-embed-text embeddings  │
-         └─────────────┬──────────────────┘
-                       │
-         ┌─────────────▼──────────────────┐
-         │        legal_db/               │
-         │   constitution.pdf  · ~250p    │
-         │   ipc.pdf           · ~190p    │
-         │   bns.pdf           · ~183p    │
-         │   2,999 indexed chunks         │
-         └─────────────┬──────────────────┘
-                       │ retrieved context
-         ┌─────────────▼──────────────────┐
-         │   Llama 3 (via Ollama)         │
-         │   temp=0.1 · streaming=True    │
-         │   grounded · section-cited     │
-         └─────────────┬──────────────────┘
-                       │ token stream
-         ┌─────────────▼──────────────────┐
-         │           ui.py                │
-         │   Rich panels · Markdown       │
-         │   Live streaming · Spinner     │
-         │   Source footer · Disclaimer   │
-         └────────────────────────────────┘
+             ┌─────────────▼──────────────────┐
+             │          retriever.py          │
+             │   ChromaDB · MMR · k=5         │
+             │   fetch_k=20 · λ=0.5           │
+             │   nomic-embed-text embeddings  │
+             └─────────────┬──────────────────┘
+                           │
+             ┌─────────────▼──────────────────┐
+             │        legal_db/               │
+             │   constitution.pdf  · ~250p    │
+             │   ipc.pdf           · ~190p    │
+             │   bns.pdf           · ~183p    │
+             │   2,999 indexed chunks         │
+             └─────────────┬──────────────────┘
+                           │ retrieved context
+             ┌─────────────▼──────────────────┐
+             │   Llama 3 (via Ollama)         │
+             │   temp=0.1 · streaming=True    │
+             │   grounded · section-cited     │
+             └─────────────┬──────────────────┘
+                           │ token stream
+             ┌─────────────▼──────────────────┐
+             │           ui.py                │
+             │   Rich panels · Markdown       │
+             │   Live streaming · Spinner     │
+             │   Source footer · Disclaimer   │
+             └────────────────────────────────┘
 ```
 
 ---
@@ -234,16 +234,16 @@ python app.py
 ## ⌨️ Slash Commands
 
 ```
-╭─ commands ──────────────────────────────────────────────╮
-│                                                         │
-│   /help      show this help screen                      │
-│   /clear     clear terminal, redraw banner              │
-│   /sources   toggle source citations on / off           │
-│   /exit      quit Legal Eagle                           │
-│                                                         │
-│   Ctrl+C     interrupt a running answer mid-stream      │
-│                                                         │
-╰─────────────────────────────────────────────────────────╯
+    ╭─ commands ──────────────────────────────────────────────╮
+    │                                                         │
+    │   /help      show this help screen                      │
+    │   /clear     clear terminal, redraw banner              │
+    │   /sources   toggle source citations on / off           │
+    │   /exit      quit Legal Eagle                           │
+    │                                                         │
+    │   Ctrl+C     interrupt a running answer mid-stream      │
+    │                                                         │
+    ╰─────────────────────────────────────────────────────────╯
 ```
 
 ---
