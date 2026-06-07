@@ -306,7 +306,11 @@ LegalEagle/
 
 </div>
 NEW 
+
 ```
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=14&duration=3000&pause=1000&color=D4A657&center=true&vCenter=true&multiline=true&repeat=false&width=900&height=120&lines=%E2%96%88%E2%96%88%E2%95%97+++%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%95%97+%E2%96%88%E2%96%88%E2%96%92%E2%96%92%E2%96%92%E2%96%88%E2%96%88%E2%95%97++%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%95%97+%E2%96%88%E2%96%88%E2%95%97++%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%95%97+%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%95%97++%E2%96%88%E2%96%88%E2%96%92%E2%96%92%E2%96%92%E2%96%92%E2%96%88%E2%96%88%E2%95%97+%E2%96%88%E2%96%88%E2%95%97+%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%95%97;OFFLINE+AI+LEGAL+ASSISTANT+FOR+INDIAN+LAW" alt="Legal Eagle" />
+```
+
 <div align="center">
 
 ```
@@ -317,8 +321,6 @@ NEW
              ███████╗███████╗╚██████╔╝██║  ██║███████╗ ███████╗██║  ██║╚██████╔╝███████╗███████╗
              ╚══════╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝
 ```
-
-<h3>⚖️ &nbsp; Offline AI Legal Assistant for Indian Law &nbsp; ⚖️</h3>
 
 <p>
   <img src="https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
@@ -335,13 +337,6 @@ NEW
   <img src="https://img.shields.io/badge/Total-620%2B_pages-087F5B?style=flat-square"/>
 </p>
 
-<br/>
-
-> ### `100% Offline · Zero API Cost · Zero Telemetry · Hallucination-Resistant`
->
-> *Ask questions about Indian law. Get grounded, section-cited answers — entirely from a local model running on your machine.*
-
-<br/>
 
 </div>
 
@@ -359,8 +354,8 @@ The CLI is inspired by modern coding terminals like Claude Code: color-coded rol
 ---
 ## Architecture
 ╔══════════════════════════════════════════════════════════════════╗
-║                        USER QUERY (CLI)                         ║
-║               app.py · REPL · slash commands                    ║
+║                        USER QUERY (CLI)                          ║
+║               app.py · REPL · slash commands                     ║
 ╚══════════════════════════╦═══════════════════════════════════════╝
                            ║
               ┌────────────▼────────────┐
@@ -479,7 +474,7 @@ python app.py
 ---
 
 
-## ⌨️ Slash Commands
+## Slash Commands
 
 
 ╭─ commands ──────────────────────────────────────────────╮
@@ -529,29 +524,4 @@ LegalEagle/
 ├── requirements.txt
 └── README.md
 
-
-
-
-**Built with ⚡ by [Anvit Devadiga](https://github.com/AnvitDevadiga)**
-
-*AI Engineer · Industrial Domain · Production RAG Systems*
-
-<br/>
-
-[![GitHub](https://img.shields.io/badge/GitHub-AnvitDevadiga-181717?style=for-the-badge&logo=github)](https://github.com/AnvitDevadiga)
-[![Email](https://img.shields.io/badge/Email-anvitdevadiga.in%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:anvitdevadiga.in@gmail.com)
-
-<br/>
-
-*If this helped you, drop a ⭐ — it means a lot!*
-
-<br/>
-
----
-
-🍕 *If Legal Eagle saved you a trip to the lawyer, buy me a pizza!*
-
-[![Buy me a pizza](https://img.shields.io/badge/Buy_me_a-🍕_Pizza-FF6B35?style=for-the-badge)](https://buymeacoffee.com/anvitdevadiga)
-
-</div>
 ```
