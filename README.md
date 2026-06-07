@@ -307,9 +307,7 @@ LegalEagle/
 </div>
 NEW 
 
-```
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=14&duration=3000&pause=1000&color=D4A657&center=true&vCenter=true&multiline=true&repeat=false&width=900&height=120&lines=%E2%96%88%E2%96%88%E2%95%97+++%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%95%97+%E2%96%88%E2%96%88%E2%96%92%E2%96%92%E2%96%92%E2%96%88%E2%96%88%E2%95%97++%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%95%97+%E2%96%88%E2%96%88%E2%95%97++%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%95%97+%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%95%97++%E2%96%88%E2%96%88%E2%96%92%E2%96%92%E2%96%92%E2%96%92%E2%96%88%E2%96%88%E2%95%97+%E2%96%88%E2%96%88%E2%95%97+%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%95%97;OFFLINE+AI+LEGAL+ASSISTANT+FOR+INDIAN+LAW" alt="Legal Eagle" />
-```
 
 <div align="center">
 
@@ -343,7 +341,7 @@ NEW
 ---
 ```
 
-## What is Legal Eagle?
+# What is Legal Eagle?
 
 Legal Eagle is a **production-grade offline RAG (Retrieval-Augmented Generation) system** built for Indian law. It indexes 620+ pages of legal documents — the Indian Constitution, IPC, and Bharatiya Nyaya Sanhita — into a local ChromaDB vector store and answers questions using a locally running **Llama 3** model via Ollama.
 
@@ -352,7 +350,7 @@ Legal Eagle is a **production-grade offline RAG (Retrieval-Augmented Generation)
 The CLI is inspired by modern coding terminals like Claude Code: color-coded role panels, streaming markdown answers, live spinners during retrieval, and syntax-highlighted output — all running entirely offline.
 
 ---
-## Architecture
+# Architecture
 ╔══════════════════════════════════════════════════════════════════╗
 ║                        USER QUERY (CLI)                          ║
 ║               app.py · REPL · slash commands                     ║
@@ -399,7 +397,7 @@ The CLI is inspired by modern coding terminals like Claude Code: color-coded rol
          └────────────────────────────────┘
 
 
-## Legal Coverage
+# Legal Coverage
 
 | Document | Coverage | Chunks | Pages |
 |:---|:---|:---:|:---:|
@@ -410,7 +408,7 @@ The CLI is inspired by modern coding terminals like Claude Code: color-coded rol
 
 ---
 
-## Tech Stack
+# Tech Stack
 
 | Layer | Technology | Why |
 |:---|:---|:---|
@@ -424,14 +422,14 @@ The CLI is inspired by modern coding terminals like Claude Code: color-coded rol
 
 ---
 
-## Quick Start
+# Quick Start
 
-### Prerequisites
+# Prerequisites
 
 - Python 3.11+
 - [Ollama](https://ollama.ai) installed
 
-### 1 — Clone & install
+# 1 — Clone & install
 
 bash
 git clone https://github.com/AnvitDevadiga/LegalEagle.git
@@ -441,7 +439,7 @@ source venv/bin/activate        # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
 
-### 2 — Pull local models
+# 2 — Pull local models
 
 bash
 ollama pull llama3
@@ -449,7 +447,7 @@ ollama pull nomic-embed-text
 ollama serve                    # keep this terminal running
 
 
-### 3 — Add your legal PDFs
+# 3 — Add your legal PDFs
 
 
 data/
@@ -458,14 +456,14 @@ data/
 └── bns.pdf
 
 
-### 4 — Build the vector store
+# 4 — Build the vector store
 
 bash
 python ingest.py            # one-time index (~2 min for 620 pages)
 python ingest.py --rebuild  # nuke & reindex from scratch
 
 
-### 5 — Launch
+# 5 — Launch
 
 bash
 python app.py
