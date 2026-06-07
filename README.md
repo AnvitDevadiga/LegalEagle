@@ -346,6 +346,7 @@ NEW
 </div>
 
 ---
+```
 
 ## What is Legal Eagle?
 
@@ -356,10 +357,7 @@ Legal Eagle is a **production-grade offline RAG (Retrieval-Augmented Generation)
 The CLI is inspired by modern coding terminals like Claude Code: color-coded role panels, streaming markdown answers, live spinners during retrieval, and syntax-highlighted output — all running entirely offline.
 
 ---
-
 ## Architecture
-
-```
 ╔══════════════════════════════════════════════════════════════════╗
 ║                        USER QUERY (CLI)                         ║
 ║               app.py · REPL · slash commands                    ║
@@ -404,9 +402,7 @@ The CLI is inspired by modern coding terminals like Claude Code: color-coded rol
          │   Live streaming · Spinner     │
          │   Source footer · Disclaimer   │
          └────────────────────────────────┘
-```
 
----
 
 ## Legal Coverage
 
@@ -442,50 +438,50 @@ The CLI is inspired by modern coding terminals like Claude Code: color-coded rol
 
 ### 1 — Clone & install
 
-```bash
+bash
 git clone https://github.com/AnvitDevadiga/LegalEagle.git
 cd LegalEagle
 python3 -m venv venv
 source venv/bin/activate        # Windows: venv\Scripts\activate
 pip install -r requirements.txt
-```
+
 
 ### 2 — Pull local models
 
-```bash
+bash
 ollama pull llama3
 ollama pull nomic-embed-text
 ollama serve                    # keep this terminal running
-```
+
 
 ### 3 — Add your legal PDFs
 
-```
+
 data/
 ├── constitution.pdf
 ├── ipc.pdf
 └── bns.pdf
-```
+
 
 ### 4 — Build the vector store
 
-```bash
+bash
 python ingest.py            # one-time index (~2 min for 620 pages)
 python ingest.py --rebuild  # nuke & reindex from scratch
-```
+
 
 ### 5 — Launch
 
-```bash
+bash
 python app.py
-```
+
 
 ---
 
 
 ## ⌨️ Slash Commands
 
-```
+
 ╭─ commands ──────────────────────────────────────────────╮
 │                                                         │
 │   /help      show this help screen                      │
@@ -496,13 +492,13 @@ python app.py
 │   Ctrl+C     interrupt a running answer mid-stream      │
 │                                                         │
 ╰─────────────────────────────────────────────────────────╯
-```
+
 
 ---
 
 ## Anti-Hallucination Design
 
-```
+
 ✓  Answers strictly grounded in retrieved legal context only
 ✓  Explicit refusal when information is absent from documents
 ✓  MMR retrieval — diversified chunks, no repeated context bleed
@@ -510,14 +506,13 @@ python app.py
 ✓  Every answer cites source PDF · chunk count · latency
 ✓  Safety Notice auto-injected for sensitive keywords
    (abuse · assault · self-harm · violence · threat)
-```
 
 ---
 
 
 ## Project Structure
 
-```
+
 LegalEagle/
 ├── data/
 │   ├── constitution.pdf          ← Indian Constitution (~250p)
@@ -533,45 +528,8 @@ LegalEagle/
 ├── prompts.py                    ← System & user prompt templates
 ├── requirements.txt
 └── README.md
-```
 
-<details>
-<summary><b>🎨 Colorized view</b></summary>
-<br/>
 
-<!-- COLORIZED TERMINAL TREE -->
-<table>
-<tr>
-<td>
-
-```ansi
-LegalEagle/
-```
-
-</td>
-</tr>
-</table>
-
-<pre style="background:#0d0d0d;color:#e6e6e6;padding:1.2rem 1.5rem;border-radius:8px;font-family:'JetBrains Mono','Fira Code',monospace;font-size:13px;line-height:1.9;border:1px solid #2a2a2a;">
-<span style="color:#5fafd7;">├──</span> <span style="color:#d4a657;">📂 data/</span>
-<span style="color:#5fafd7;">│   ├──</span> <span style="color:#87d787;">constitution.pdf</span>      <span style="color:#555;">← Indian Constitution (~250p)</span>
-<span style="color:#5fafd7;">│   ├──</span> <span style="color:#87d787;">ipc.pdf</span>               <span style="color:#555;">← Indian Penal Code (~190p)</span>
-<span style="color:#5fafd7;">│   └──</span> <span style="color:#87d787;">bns.pdf</span>               <span style="color:#555;">← Bharatiya Nyaya Sanhita (~183p)</span>
-<span style="color:#5fafd7;">│</span>
-<span style="color:#5fafd7;">├──</span> <span style="color:#d4a657;">📂 screenshots/</span>
-<span style="color:#5fafd7;">│   ├──</span> <span style="color:#b8860b;">demo-consumer-rights.png</span>
-<span style="color:#5fafd7;">│   └──</span> <span style="color:#b8860b;">demo-harassment-safety.png</span>
-<span style="color:#5fafd7;">│</span>
-<span style="color:#5fafd7;">├──</span> <span style="color:#5fafd7;">🐍 app.py</span>             <span style="color:#555;">← REPL entry point · safety filter · LCEL chain</span>
-<span style="color:#5fafd7;">├──</span> <span style="color:#5fafd7;">🐍 ingest.py</span>          <span style="color:#555;">← PDF loader · chunker · Chroma embedder</span>
-<span style="color:#5fafd7;">├──</span> <span style="color:#5fafd7;">🐍 retriever.py</span>       <span style="color:#555;">← Singleton ChromaDB + MMR retriever</span>
-<span style="color:#5fafd7;">├──</span> <span style="color:#5fafd7;">🐍 ui.py</span>              <span style="color:#555;">← Rich terminal renderer · panels · streaming</span>
-<span style="color:#5fafd7;">├──</span> <span style="color:#5fafd7;">🐍 prompts.py</span>         <span style="color:#555;">← System &amp; user prompt templates</span>
-<span style="color:#5fafd7;">├──</span> <span style="color:#aaaaaa;">📄 requirements.txt</span>
-<span style="color:#5fafd7;">└──</span> <span style="color:#aaaaaa;">📄 README.md</span>
-</pre>
-
-</details>
 
 
 **Built with ⚡ by [Anvit Devadiga](https://github.com/AnvitDevadiga)**
